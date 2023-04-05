@@ -3,35 +3,46 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    margin: 30px;
+    margin: 2vw;
     font-family: "Helvetica", serif;
     font-size: 20px;
 }
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     background-color: #00003e;
     color: white;
-    padding: 20px;
+    padding: 1em;
+    border: 2px solid white;
 }
 
 header h1 {
     margin: 0;
     align-self: center;
+    color: white;
+    transition: color 2s, transform 1s;
+}
+
+header h1:hover {
+    color: darkred;
+    transform: rotate(360deg);
 }
 
 main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
+    padding: 1em;
 }
 
 .planet {
     background-color: #00003e;
-    width: 400px;
-    margin: 20px;
+    width: 21vw;
+    margin: 1em;
     border: 1px solid #cccccc;
     box-shadow: 2px 2px 5px #cccccc;
 }
@@ -46,7 +57,7 @@ main {
 figure {
     margin-block: 0;
     margin-inline: 0;
-    height: 400px;
+    height: 21vw;
     background-color: black;
     display: flex;
 }
@@ -100,6 +111,17 @@ nav ul li a {
     text-decoration: none;
     display: block;
     padding: 10px;
+    position: relative;
+    line-height: 2em;
+}
+
+.dropdown::after {
+    content: "\25BC";
+    font-size: 0.7em;
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    transform: translateY(-50%) translateX(150%);
 }
 
 .dropdown {
