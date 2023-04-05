@@ -161,22 +161,19 @@ nav ul li a {
     animation: fadein 0.3s ease-in-out forwards;
 }
 
+/* NOTE: this animation does play at page load, can only be circumvented using JS.
+   More details here: https://stackoverflow.com/questions/16516793/how-to-reverse-an-animation-on-mouse-out-after-hover */
 .dropdown:not(:hover) .dropdown-menu {
     animation: fadeout 0.3s ease-in-out forwards;
-    display:none;
 }
 
 @keyframes fadein {
-    0% {
-        display:none;
+    from {
         visibility: hidden;
         opacity: 0;
         transform: translateY(-10px);
     }
-    1% {
-        display: block;
-    }
-    100% {
+    to {
         visibility: visible;
         opacity: 1;
         transform: translateY(0);
@@ -184,17 +181,12 @@ nav ul li a {
 }
 
 @keyframes fadeout {
-    0% {
-        display: block;
+    from {
         visibility: visible;
         opacity: 1;
         transform: translateY(0);
     }
-    99% {
-        display: none;
-    }
-    100% {
-        display: none;
+    to {
         visibility: hidden;
         opacity: 0;
         transform: translateY(-10px);
