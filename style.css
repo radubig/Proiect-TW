@@ -41,7 +41,7 @@ main {
 
 .planet {
     background-color: #00003e;
-    width: 21vw;
+    width: 20em;
     margin: 1em;
     border: 1px solid #cccccc;
     border-radius: 10px;
@@ -58,7 +58,7 @@ main {
 figure {
     margin-block: 0;
     margin-inline: 0;
-    height: 21vw;
+    height: 20em;
     background-color: black;
     display: flex;
 }
