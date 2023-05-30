@@ -1,8 +1,8 @@
 # TODO list
 
 - [ ] modificare stil prin js
-- [ ] manipulare DOM
-- [ ] creare si stergere elemente html
+- [x] manipulare DOM
+- [x] creare si stergere elemente html
 - [x] evenimente mouse + keyboard
 - [ ] modificare proprietati
 - [x] inputuri functionale
