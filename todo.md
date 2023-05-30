@@ -3,7 +3,7 @@
 - [ ] modificare stil prin js
 - [ ] manipulare DOM
 - [ ] creare si stergere elemente html
-- [ ] evenimente mouse + keyboard
+- [x] evenimente mouse + keyboard
 - [ ] modificare proprietati
 - [x] inputuri functionale
 - [ ] `setTimeout` / `setInterval`
@@ -14,7 +14,7 @@
     - [ ] `String`
     - [ ] `Date`
 - [ ] Schimbare aleatoare a valorilor unor proprietati
-- [ ] folosirea prop. `classList`, `target` sau `currentTarget`
+- [x] folosirea prop. `classList`, `target` sau `currentTarget`
 - [ ] `getComputedStyle`
 - [ ] `stopPropagation`
-- [ ] validarea datelor dintr-un formular folosind RegEx
+- [x] validarea datelor dintr-un formular folosind RegEx
