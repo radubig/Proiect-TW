@@ -4,16 +4,16 @@
 - [x] manipulare DOM
 - [x] creare si stergere elemente html
 - [x] evenimente mouse + keyboard
-- [ ] modificare proprietati
+- [x] modificare proprietati
 - [x] inputuri functionale
 - [ ] `setTimeout` / `setInterval`
 - [ ] `localStorage`
 - [ ] Minim o metoda din claele:
-    - [ ] `Math`
-    - [ ] `Array`
+    - [x] `Math`
+    - [x] `Array`
     - [ ] `String`
     - [ ] `Date`
-- [ ] Schimbare aleatoare a valorilor unor proprietati
+- [x] Schimbare aleatoare a valorilor unor proprietati
 - [x] folosirea prop. `classList`, `target` sau `currentTarget`
 - [ ] `getComputedStyle`
 - [ ] `stopPropagation`

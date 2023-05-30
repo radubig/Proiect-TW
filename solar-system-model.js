@@ -18,14 +18,14 @@ window.onload = function() {
     for(let i = 0; i < planetImages.length; i++) {
         planetImages[i] = new Image();
     }
-    planetImages[0].src = "images/mercury.jpg";
-    planetImages[1].src = "images/venus.jpg";
-    planetImages[2].src = "images/earth.jpg";
-    planetImages[3].src = "images/mars.jpg";
-    planetImages[4].src = "images/jupiter.jpg";
-    planetImages[5].src = "images/saturn.jpeg";
-    planetImages[6].src = "images/uranus.jpg";
-    planetImages[7].src = "images/neptune.jpg";
+    planetImages[0].src = "images/mercury.png";
+    planetImages[1].src = "images/venus.png";
+    planetImages[2].src = "images/earth.png";
+    planetImages[3].src = "images/mars.png";
+    planetImages[4].src = "images/jupiter.png";
+    planetImages[5].src = "images/saturn.png";
+    planetImages[6].src = "images/uranus.png";
+    planetImages[7].src = "images/neptune.png";
 
     // Define initial positions
     const planetAngles = Array(8).fill(0);
