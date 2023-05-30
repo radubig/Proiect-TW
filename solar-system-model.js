@@ -2,15 +2,15 @@ window.onload = function() {
     let main = document.querySelector('main');
     let canvas = document.createElement('canvas');
     canvas.id = 'canvas';
-    canvas.width = 1000;
+    canvas.width = document.body.clientWidth;
     canvas.height = 1000;
 
     main.appendChild(canvas);
 
     // Define solar system parameters
     const sunRadius = 50;
-    const planetRadii = [10, 15, 20, 25, 30, 35, 40, 45];
-    const planetOrbitRadii = [100, 150, 200, 250, 300, 350, 400, 450];
+    const planetRadii = [10, 30, 30, 20, 80, 100, 50, 50];
+    const planetOrbitRadii = [80, 150, 230, 300, 430, 640, 810, 920];
     const planetOrbitSpeeds = [0.01, 0.008, 0.006, 0.004, 0.003, 0.002, 0.0015, 0.001];
 
     // Load planet images
@@ -36,6 +36,9 @@ window.onload = function() {
         colors[i] = getRandomColor();
     }
 
+    // Start animation
+    animate();
+
     // Animation loop
     function animate() {
         // Get context
@@ -44,34 +47,23 @@ window.onload = function() {
         // Clear canvas
         context.clearRect(0, 0, canvas.width, canvas.height);
 
+        const originX = canvas.width / 2;
+        const originY = canvas.height / 2;
+
         // Draw sun
         context.beginPath();
-        context.arc(canvas.width / 2, canvas.height / 2, sunRadius, 0, Math.PI * 2);
+        context.arc(originX, originY, sunRadius, 0, Math.PI * 2);
         context.fillStyle = "yellow";
         context.fill();
 
         // Draw planets
         for (let i = 0; i < planetRadii.length; i++) {
             const planetX =
-                canvas.width / 2 +
+                originX +
                 planetOrbitRadii[i] * Math.cos(planetAngles[i]);
             const planetY =
-                canvas.height / 2 +
+                originY +
                 planetOrbitRadii[i] * Math.sin(planetAngles[i]);
-
-            /*
-            context.beginPath();
-            context.arc(
-                planetX,
-                planetY,
-                planetRadii[i],
-                0,
-                Math.PI * 2
-            );
-            //context.fillStyle = colors[i];
-            context.fillStyle = context.createPattern(planetImages[i], "repeat");
-            context.fill();
-            */
 
             context.drawImage(
                 planetImages[i],
@@ -88,7 +80,6 @@ window.onload = function() {
         requestAnimationFrame(animate);
     }
 
-    // Helper function to generate random colors
     function getRandomColor() {
         const letters = "0123456789ABCDEF";
         let color = "#";
@@ -97,7 +88,4 @@ window.onload = function() {
         }
         return color;
     }
-
-    // Start animation
-    animate();
 }

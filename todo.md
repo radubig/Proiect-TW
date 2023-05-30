@@ -8,11 +8,7 @@
 - [x] inputuri functionale
 - [ ] `setTimeout` / `setInterval`
 - [ ] `localStorage`
-- [ ] Minim o metoda din claele:
-    - [x] `Math`
-    - [x] `Array`
-    - [ ] `String`
-    - [ ] `Date`
+- [x] Minim o metoda din clasele: `Math`, `Array`, `String`, `Date`
 - [x] Schimbare aleatoare a valorilor unor proprietati
 - [x] folosirea prop. `classList`, `target` sau `currentTarget`
 - [ ] `getComputedStyle`

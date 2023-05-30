@@ -38,6 +38,14 @@ header h1:hover {
 main {
     display: flex;
     flex: 1;
+    flex-direction: column;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+main > div{
+    display: flex;
+    flex: 1;
     flex-wrap: wrap;
     justify-content: center;
     align-content: flex-start;
@@ -81,7 +89,7 @@ figure {
     text-align: justify;
 }
 
-footer {;
+footer {
     width: 100%;
     background-color: #00003e;
     color: white;
@@ -91,6 +99,12 @@ footer {;
 
 footer p {
     margin: 0;
+}
+
+canvas {
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 nav {
