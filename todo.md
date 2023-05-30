@@ -6,7 +6,7 @@
 - [x] evenimente mouse + keyboard
 - [x] modificare proprietati
 - [x] inputuri functionale
-- [ ] `setTimeout` / `setInterval`
+- [x] `setTimeout` / `setInterval`
 - [ ] `localStorage`
 - [x] Minim o metoda din clasele: `Math`, `Array`, `String`, `Date`
 - [x] Schimbare aleatoare a valorilor unor proprietati

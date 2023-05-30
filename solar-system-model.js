@@ -30,11 +30,24 @@ window.onload = function() {
     // Define initial positions
     const planetAngles = Array(8).fill(0);
 
-    // Define some colors
+    let canvas_clicked = false;
     let colors = new Array(8);
-    for(let i = 0; i < colors.length; i++) {
-        colors[i] = getRandomColor();
-    }
+
+    let reset_canvas = null;
+    canvas.addEventListener('mousedown', function(e) {
+        if(reset_canvas)
+            window.clearTimeout(reset_canvas);
+
+        canvas_clicked = true;
+
+        // Randomize colors
+        for(let i = 0; i < colors.length; i++) {
+            colors[i] = getRandomColor();
+        }
+
+        // Set timeout to reset canvas_clicked
+        reset_canvas = window.setTimeout(() => {canvas_clicked = false; reset_canvas=null;}, 3000);
+    });
 
     // Start animation
     animate();
@@ -65,13 +78,20 @@ window.onload = function() {
                 originY +
                 planetOrbitRadii[i] * Math.sin(planetAngles[i]);
 
-            context.drawImage(
-                planetImages[i],
-                planetX - planetRadii[i],
-                planetY - planetRadii[i],
-                planetRadii[i] * 2,
-                planetRadii[i] * 2
-            );
+            if(!canvas_clicked) {
+                context.drawImage(
+                    planetImages[i],
+                    planetX - planetRadii[i],
+                    planetY - planetRadii[i],
+                    planetRadii[i] * 2,
+                    planetRadii[i] * 2
+                );
+            } else {
+                context.beginPath();
+                context.arc(planetX, planetY, planetRadii[i], 0, Math.PI * 2);
+                context.fillStyle = colors[i];
+                context.fill();
+            }
 
             planetAngles[i] += planetOrbitSpeeds[i];
         }
