@@ -1,5 +1,4 @@
 window.onload = function() {
-    // fix the issue with drop-down animation
     let dropdown = document.getElementById('dropdown');
     dropdown.addEventListener('mouseover', DropdownCallback);
 
