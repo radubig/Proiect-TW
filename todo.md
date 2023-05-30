@@ -7,7 +7,7 @@
 - [x] modificare proprietati
 - [x] inputuri functionale
 - [x] `setTimeout` / `setInterval`
-- [ ] `localStorage`
+- [x] `localStorage`
 - [x] Minim o metoda din clasele: `Math`, `Array`, `String`, `Date`
 - [x] Schimbare aleatoare a valorilor unor proprietati
 - [x] folosirea prop. `classList`, `target` sau `currentTarget`
