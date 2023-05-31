@@ -30,4 +30,13 @@ window.onload = function() {
     addLocalStorageListener('email', email);
     addLocalStorageListener('phone_no', phone_no);
     addLocalStorageListener('message', message);
+
+    // reset button
+    let resetButton = document.getElementById('reset-button');
+    resetButton.addEventListener('mousedown', () => {
+        localStorage.removeItem('name');
+        localStorage.removeItem('email');
+        localStorage.removeItem('phone_no');
+        localStorage.removeItem('message');
+    })
 }
