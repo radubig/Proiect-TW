@@ -21,6 +21,17 @@ fieldset textarea {
     resize: none;
 }
 
-#submit-button {
+input, textarea {
+    padding: 5px;
+    font-size: 15px;
+}
 
+#submit-button {
+    background-color: limegreen;
+    color: white;
+}
+
+#reset-button {
+    background-color: mediumpurple;
+    color: white;
 }
